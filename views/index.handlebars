@@ -1,0 +1,38 @@
+<div class= "main">
+    <h1>
+        Burger Builder
+    </h1>
+    <div class="app">
+        <div class="burgers">
+            <div class= "undevoured-container">
+                Burgers
+                <div class="undevoured">
+                    {{#each burgers}}
+                    {{#unless devoured}}
+                    <div class="burger">
+                        {{burger_name}}
+                        <button class="eat-button" value="{{id}}">Eat Burger</button>
+                    </div>
+                    {{/unless}}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="devoured-container">
+                Eaten Burgers
+                <div class="devoured">
+                    {{#each burgers}}
+                    {{#if devoured}}
+                    <div class="burger">
+                        {{burger_name}}
+                    </div>
+                    {{/if}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+        <form class = "create-burger" action="/" method="POST">
+            <input id="burger-name" type="text" name="burger"></input>
+            <button id="submit-burger" type="submit">Create</button>
+        </form>
+    </div>
+</div>
