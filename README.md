@@ -1,4 +1,4 @@
-#Burger
+# Burger
 ## How to use it 
 This app lets the users input any food they would like to eat.
 
